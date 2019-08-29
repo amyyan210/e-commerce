@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../models/Product';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-cart',
@@ -9,9 +10,14 @@ import { Product } from '../models/Product';
 export class CartComponent implements OnInit {
 
   public productsInCart: Product[];
+  public subscriptions = new Subscription();
+
   constructor() { }
 
   ngOnInit() {
+    // this.subscriptions.add(
+
+    // );
     this.productsInCart = [
       {
         id: 2,
